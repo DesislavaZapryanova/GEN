@@ -1,0 +1,43 @@
+/* Collection.css */
+
+.container-page {
+  display: flex;
+  background-color: #333;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.collections-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  padding: 20px;
+  margin-top: 150px;
+  border-radius: 10px;
+  opacity: 0.85;
+}
+
+.collection-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 500px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+}
+
+.collection-image {
+  width: 600px;
+  height: 500px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.collection-image:hover {
+  transform: scale(1.1);
+}
