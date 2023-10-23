@@ -13,8 +13,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 50px; /* Adjusted margin */
-  padding: 20px; /* Adjusted padding */
+  margin: 50px;
   margin-top: 150px;
   border-radius: 10px;
   opacity: 0.85;

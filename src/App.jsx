@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Collection from './components/pages/Collection';
 import Contacts from './components/pages/Contacts';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
             />
           </Routes>
         </main>
-        {/* You might want to include a <footer> here if needed */}
+        <Footer />
       </div>
     </Router>
   );

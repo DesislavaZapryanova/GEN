@@ -1,18 +1,13 @@
 import React from 'react';
+import Footer from '../Footer';
 import './Contacts.css';
 
 function Contacts() {
-  <div className="container">
-    <section className="subscription">
-      <form>
-        <input type="text" />
-        <input
-          type="submit"
-          value="Send"
-        />
-      </form>
-    </section>
-  </div>;
+  return (
+    <div className="container-contacts">
+      <Footer />
+    </div>
+  );
 }
 
 export default Contacts;
