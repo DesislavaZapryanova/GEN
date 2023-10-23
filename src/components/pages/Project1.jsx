@@ -1,7 +1,7 @@
 // Project1.js
 
 import React, { useState } from 'react';
-import './Project1.css';
+import './Project.css';
 
 function Project1() {
   const images = [
