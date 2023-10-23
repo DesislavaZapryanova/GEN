@@ -59,7 +59,7 @@
   top: 50%;
   font-size: 24px;
   color: #fff;
-  background: #194d42; /* Set the background color to #194d42 */
+  /* Set the background color to #194d42 */
   border: none;
   cursor: pointer;
   outline: none;
@@ -73,6 +73,7 @@
 
 .arrow-button:hover {
   transform: scale(1.2); /* Slightly scale up on hover */
+  background: #194d42;
 }
 
 .left-arrow,
