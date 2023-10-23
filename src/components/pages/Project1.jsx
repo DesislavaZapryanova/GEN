@@ -1,7 +1,11 @@
 import React from 'react';
 
-function Project_1() {
-  return <div>some text</div>;
+function Project1() {
+  return (
+    <div className="cointainer-project">
+      <img></img>
+    </div>
+  );
 }
 
-export default Project_1;
+export default Project1;

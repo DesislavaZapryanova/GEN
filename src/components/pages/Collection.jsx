@@ -1,67 +1,130 @@
-// Collection.js
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './Collection.css';
 import { Link } from 'react-router-dom';
-import './Collection.css'; // Import your CSS file
 
 function Collection() {
   const sliderSettings = {
-    // Add your slider settings here
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     arrows: false,
+    pauseOnFocus: true,
+    initialSlide: 0,
   };
-
-  const imageStacksData = [
-    [
-      { src: 'images/kitchen-1.jpg', to: '/project1' },
-      { src: 'images/kitchen-2.jpg', to: '/project1' },
-    ],
-    [
-      { src: 'images/1.jpg', to: '/project2' },
-      { src: 'images/bedroom2-1.jpg', to: '/project2' },
-    ],
-    [
-      { src: 'images/living-room-3.jpg', to: '/project3' },
-      { src: 'images/living-room-2.jpg', to: '/project3' },
-    ],
-    [
-      { src: 'images/2.jpg', to: '/project4' },
-      { src: 'images/4.jpg', to: '/project4' },
-    ],
-    [
-      { src: 'images/bathroom-1.jpg', to: '/project5' },
-      { src: 'images/bathroom-2.jpg', to: '/project5' },
-    ],
-  ];
 
   return (
     <div className="container-page">
-      <div className="collections-container">
-        {imageStacksData.map((imageStack, index) => (
+      <ul className="collections-container">
+        <Link to="/project1">
           <Slider
-            className="collection-slider"
-            key={index}
-            {...sliderSettings}>
-            {imageStack.map((image, imageIndex) => (
-              <Link
-                to={image.to}
-                key={imageIndex}>
-                <img
-                  className="collection-image"
-                  src={image.src}
-                  alt={`Image ${index + 1}-${imageIndex + 1}`}
-                />
-              </Link>
-            ))}
+            {...sliderSettings}
+            className="collection-slider">
+            <img
+              className="collection-image"
+              src="images/kitchen-1.jpg"
+              alt="Kitchen 1"
+            />
+
+            <img
+              className="collection-image"
+              src="images/kitchen-2.jpg"
+              alt="Kitchen 2"
+            />
+
+            <img
+              className="collection-image"
+              src="images/living_room2.jpg"
+              alt="Living Room 2"
+            />
           </Slider>
-        ))}
-      </div>
+        </Link>
+        <Link to="/project2">
+          <Slider
+            {...sliderSettings}
+            className="collection-slider">
+            <img
+              className="collection-image"
+              src="images/1.jpg"
+              alt="Image 1"
+            />
+            <img
+              className="collection-image"
+              src="images/bedroom2-1.jpg"
+              alt="Bedroom 2-1"
+            />
+            <img
+              className="collection-image"
+              src="images/bedroom2-2.jpg"
+              alt="Bedroom 2-2"
+            />
+          </Slider>
+        </Link>
+        <Link to="/project3">
+          <Slider
+            {...sliderSettings}
+            className="collection-slider">
+            <img
+              className="collection-image"
+              src="images/living-room-3.jpg"
+              alt="Living Room 3"
+            />
+            <img
+              className="collection-image"
+              src="images/living-room-2.jpg"
+              alt="Living Room 2"
+            />
+            <img
+              className="collection-image"
+              src="images/living-room-1.jpg"
+              alt="Living Room 1"
+            />
+          </Slider>
+        </Link>
+        <Link to="/project4">
+          <Slider
+            {...sliderSettings}
+            className="collection-slider">
+            <img
+              className="collection-image"
+              src="images/bathroom-1.jpg"
+              alt="Bathroom 1"
+            />
+            <img
+              className="collection-image"
+              src="images/bathroom-2.jpg"
+              alt="Bathroom 2"
+            />
+            <img
+              className="collection-image"
+              src="images/bathroom-3.jpg"
+              alt="Bathroom 3"
+            />
+          </Slider>
+        </Link>
+        <Link to="/project5">
+          <Slider
+            {...sliderSettings}
+            className="collection-slider">
+            <img
+              className="collection-image"
+              src="images/2.jpg"
+              alt="Image 2"
+            />
+            <img
+              className="collection-image"
+              src="images/4.jpg"
+              alt="Image 4"
+            />
+          </Slider>
+        </Link>
+      </ul>
     </div>
   );
 }

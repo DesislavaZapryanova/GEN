@@ -3,9 +3,9 @@
 .container-page {
   display: flex;
   background-color: #333;
-  flex-direction: column; /* Stack children vertically */
-  min-height: 100vh; /* Use at least the full height of the viewport */
-  justify-content: space-between; /* Push content to the top and bottom */
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 .collections-container {
@@ -28,20 +28,20 @@
   height: 500px;
   margin-right: 60px;
   margin-bottom: 60px;
-  transition: transform 0.3s ease; /* Add transition for smooth effect */
+  transition: transform 0.3s ease;
 }
 
 .collection-slider:hover {
-  transform: scale(1.1); /* Increase the scale on hover */
+  transform: scale(1.1);
 }
 
 .collection-image {
-  width: 600px; /* Set the desired width */
-  height: 500px; /* Set the desired height */
+  width: 600px;
+  height: 500px;
   margin: 10px;
   transition: transform 0.3s ease;
 }
 
 .collection-image:hover {
-  transform: scale(1.1); /* Increase the scale on hover */
+  transform: scale(1.1);
 }
