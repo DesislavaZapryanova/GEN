@@ -29,7 +29,6 @@ function Collection() {
             <img
               className="collection-image"
               src="images/kitchen-1.jpg"
-              alt="Kitchen 1"
             />
 
             <img
