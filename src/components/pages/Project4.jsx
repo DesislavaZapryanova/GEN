@@ -1,7 +1,20 @@
 import React from 'react';
 
-function Project_1() {
-  return <div>some text</div>;
+function Project4() {
+  return (
+    <div>
+      <img
+        className="collection-image"
+        src="images/2.jpg"
+        alt="Image 2"
+      />
+      <img
+        className="collection-image"
+        src="images/4.jpg"
+        alt="Image 4"
+      />
+    </div>
+  );
 }
 
-export default Project_1;
+export default Project4;
