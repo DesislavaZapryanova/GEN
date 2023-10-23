@@ -59,12 +59,11 @@
   top: 50%;
   font-size: 24px;
   color: #fff;
-  /* Set the background color to #194d42 */
   border: none;
   cursor: pointer;
   outline: none;
   padding: 10px;
-  border-radius: 45%; /* Make the button circular */
+  border-radius: 50%; /* Make the button circular */
   transition: background 0.3s ease, transform 0.3s ease;
   display: flex;
   align-items: center;
@@ -72,8 +71,8 @@
 }
 
 .arrow-button:hover {
+  background-color: #194d42; /* Darker background on hover */
   transform: scale(1.2); /* Slightly scale up on hover */
-  background: #194d42;
 }
 
 .left-arrow,
@@ -90,11 +89,11 @@
 }
 
 .left-arrow {
-  left: 80px;
+  left: 100px;
 }
 
 .right-arrow {
-  right: 80px;
+  right: 100px;
 }
 
 @media (max-width: 600px) {
