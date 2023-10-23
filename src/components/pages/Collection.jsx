@@ -1,6 +1,4 @@
-// Collection.jsx
-
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,26 +6,45 @@ import './Collection.css';
 import Footer from '../Footer';
 
 function Collection() {
-  const SliderSettings = {
+  const sliderRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const sliderSettings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: isHovered,
     autoplaySpeed: 4000,
     arrows: false,
     pauseOnHover: false,
     initialSlide: 0,
   };
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (sliderRef.current) {
+      sliderRef.current.slickPlay();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (sliderRef.current) {
+      sliderRef.current.slickPause();
+    }
+  };
+
   return (
     <div className="container-page">
       <ul className="collections-container">
-        {/* First Slider */}
         <Slider
-          {...SliderSettings}
-          className="collection-slider">
+          {...sliderSettings}
+          className="collection-slider"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          ref={sliderRef}>
           <img
             className="collection-image"
             src="images/kitchen-1.jpg"
@@ -55,10 +72,12 @@ function Collection() {
           />
         </Slider>
 
-        {/* Second Slider */}
         <Slider
-          {...SliderSettings}
-          className="collection-slider">
+          {...sliderSettings}
+          className="collection-slider"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          ref={sliderRef}>
           <img
             className="collection-image"
             src="images/1.jpg"
@@ -76,10 +95,12 @@ function Collection() {
           />
         </Slider>
 
-        {/* Third Slider */}
         <Slider
-          {...SliderSettings}
-          className="collection-slider">
+          {...sliderSettings}
+          className="collection-slider"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          ref={sliderRef}>
           <img
             className="collection-image"
             src="images/living-room-3.jpg"
@@ -112,10 +133,12 @@ function Collection() {
           />
         </Slider>
 
-        {/* Fourth Slider */}
         <Slider
-          {...SliderSettings}
-          className="collection-slider">
+          {...sliderSettings}
+          className="collection-slider"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          ref={sliderRef}>
           <img
             className="collection-image"
             src="images/2.jpg"
@@ -128,10 +151,12 @@ function Collection() {
           />
         </Slider>
 
-        {/* Fifth Slider */}
         <Slider
-          {...SliderSettings}
-          className="collection-slider">
+          {...sliderSettings}
+          className="collection-slider"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          ref={sliderRef}>
           <img
             className="collection-image"
             src="images/bathroom-1.jpg"
