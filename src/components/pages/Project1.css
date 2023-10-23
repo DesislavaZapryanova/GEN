@@ -72,7 +72,6 @@
 }
 
 .arrow-button:hover {
-  background: #0d322a; /* Darker background on hover */
   transform: scale(1.2); /* Slightly scale up on hover */
 }
 
