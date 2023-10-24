@@ -22,7 +22,7 @@ const Contact = () => {
 
   return (
     <div className="container-contacts-page">
-      <h1>CONTACT</h1>
+      <h1>CONTACTS</h1>
       <div className="container-forms">
         <div className="container-form">
           <form
@@ -53,7 +53,6 @@ const Contact = () => {
               required></textarea>
             <button type="submit">
               <div>
-                <i className="fa fa-paper-plane"></i>
                 <span>SEND</span>
               </div>
             </button>
@@ -68,7 +67,13 @@ const Contact = () => {
             </li>
             <li>
               <i className="fa fa-phone fa-2x" />
-              <span>(212) 555-2368</span>
+              <span>
+                <a
+                  href="tel:1-212-555-5555"
+                  title="Give me a call">
+                  (212) 555-2368
+                </a>
+              </span>
             </li>
             <li>
               <i className="fa fa-envelope fa-2x" />
