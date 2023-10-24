@@ -51,7 +51,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          to="/"
+          to="/about"
           className="nav-link">
           ABOUT
         </Link>

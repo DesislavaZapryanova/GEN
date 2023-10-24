@@ -12,6 +12,7 @@ import Project2 from './components/pages/Project2';
 import Project3 from './components/pages/Project3';
 import Project4 from './components/pages/Project4';
 import Project5 from './components/pages/Project5';
+import About from './components/pages/About';
 
 function App() {
   return (
@@ -53,6 +54,10 @@ function App() {
             <Route
               path="/project5"
               element={<Project5 />}
+            />
+            <Route
+              path="/about"
+              element={<About />}
             />
           </Routes>
         </main>
