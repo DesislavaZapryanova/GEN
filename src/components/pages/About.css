@@ -12,17 +12,15 @@
   font-family: 'Italiana', sans-serif;
 }
 
-.container-texts {
+.container-frame {
   display: flex;
-  background-color: black;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 5px;
+  align-items: center; /* Center items horizontally and vertically */
+  margin-top: 10px;
   opacity: 0.85;
-  flex-direction: row;
   margin: 20px;
-  min-height: 70vh;
+  min-height: 60vh;
   width: 70%;
 }
 
@@ -30,11 +28,17 @@ h1 {
   margin-top: 2%;
   font-size: 2em;
   width: 100%;
+  margin-bottom: 20px;
 }
 
-.texts {
-  width: 50%;
+.container-texts {
+  text-align: justify;
+  font-size: 20px;
+  width: 500px;
+  height: 500px;
   color: white;
+  margin-right: 10%; /* Add margin between text and image */
+  letter-spacing: 1px;
 }
 
 .container-texts p {
@@ -42,8 +46,9 @@ h1 {
 }
 
 .about-image {
-  width: 80%;
+  width: 400px; /* Adjusted width to give half space to image */
   height: 500px;
   margin-top: 20px;
+  margin-left: 20px; /* Adjusted margin */
   transition: transform 0.3s ease;
 }
