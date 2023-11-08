@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import './Contacts.css';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -84,12 +85,29 @@ const Contact = () => {
           </ul>
           <hr />
           <div className="social-icons">
-            <i className="fab fa-facebook-square" />
-            <i className="fab fa-instagram" />
-            <i className="fab fa-linkedin" />
+            <Link
+              className="social-link"
+              target="_blank"
+              aria-label="Facebook">
+              <i className="fab fa-facebook-square" />
+            </Link>
+
+            <Link
+              className="social-link"
+              target="_blank"
+              aria-label="Instagram">
+              <i className="fab fa-instagram" />
+            </Link>
+
+            <Link
+              className="social-link"
+              target="_blank"
+              aria-label="LinkedIn">
+              <i className="fab fa-linkedin" />
+            </Link>
           </div>
           <hr />
-          <div className="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+          <div className="copyright">© GEN Interiors Ltd 2023 - All Rights Reserved</div>
         </div>
       </div>
     </div>

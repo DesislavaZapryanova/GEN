@@ -34,9 +34,7 @@ const Navbar = () => {
   return (
     <nav className={isMobile ? 'stacked-nav' : ''}>
       <div className="nav-logo">
-        <Link
-          to="/"
-          className="unframed-link">
+        <Link to="/">
           <img
             src="./images/GEN_logo.jpg"
             alt="GEN Logo"
@@ -51,9 +49,21 @@ const Navbar = () => {
         </Link>
 
         <Link
+          to="/"
+          className="nav-link">
+          SERVICES
+        </Link>
+
+        <Link
           to="/about"
           className="nav-link">
           ABOUT
+        </Link>
+
+        <Link
+          to="/"
+          className="nav-link">
+          BLOG
         </Link>
 
         <Link
