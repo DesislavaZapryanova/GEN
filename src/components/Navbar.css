@@ -17,20 +17,18 @@ nav {
   color: white;
   z-index: 1000;
   border-bottom: none;
-  margin: 10px auto 0; /* Combined margin properties */
 }
 
 .nav-logo img {
   max-width: 80px;
   max-height: 80px;
-  margin: 10px auto 0; /* Combined margin properties */
 }
 
 .nav-links {
   display: flex;
   font-family: 'Italiana', sans-serif;
   font-size: 20px;
-  justify-content: flex-end; /* Align links to the right on larger screens */
+  justify-content: flex-end;
 }
 
 .nav-links .nav-link,
