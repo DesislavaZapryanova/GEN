@@ -1,79 +1,99 @@
 // Navbar.js
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
+function Navbar() {
+  const [click, setClick] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 0) {
-        nav.classList.add('nav-scrolled');
-      } else {
-        nav.classList.remove('nav-scrolled');
-      }
-    };
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
+    showButton();
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-
-    handleResize();
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setClick(false);
+    }
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
   return (
-    <nav className={isMobile ? 'stacked-nav' : ''}>
-      <div className="nav-logo">
-        <Link to="/">
+    <>
+      <nav className={`navbar ${scroll ? 'scrolled' : ''}`}>
+        <Link
+          to="/"
+          className="navbar-logo"
+          onClick={closeMobileMenu}>
           <img
             src="./images/GEN_logo.jpg"
             alt="GEN Logo"
           />
         </Link>
-      </div>
-      <div className="nav-links">
-        <Link
-          to="/collection"
-          className="nav-link">
-          COLLECTION
-        </Link>
-
-        <Link
-          to="/"
-          className="nav-link">
-          SERVICES
-        </Link>
-
-        <Link
-          to="/about"
-          className="nav-link">
-          ABOUT
-        </Link>
-
-        <Link
-          to="/"
-          className="nav-link">
-          BLOG
-        </Link>
-
-        <Link
-          to="/contacts"
-          className="nav-link">
-          CONTACTS
-        </Link>
-      </div>
-    </nav>
+        <div
+          className="menu-icon"
+          onClick={handleClick}>
+          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+        </div>
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <li className="nav-item">
+            <Link
+              to="/collection"
+              className="nav-links"
+              onClick={closeMobileMenu}>
+              COLLECTION
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/services"
+              className="nav-links"
+              onClick={closeMobileMenu}>
+              SERVICES
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/"
+              className="nav-links"
+              onClick={closeMobileMenu}>
+              ABOUT
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/"
+              className="nav-links"
+              onClick={closeMobileMenu}>
+              BLOG
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/contacts"
+              className="nav-links"
+              onClick={closeMobileMenu}>
+              CONTACTS
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
-};
+}
 
 export default Navbar;
