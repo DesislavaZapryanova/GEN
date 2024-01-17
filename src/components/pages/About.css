@@ -13,10 +13,10 @@
 .container-frame {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
-  margin-top: 10%;
+  margin-top: 5%; /* Adjusted margin-top for closer frames */
   border-radius: 10px;
   width: 80%;
   border: 2px solid white;
@@ -38,5 +38,4 @@ p {
   height: auto;
   margin-right: 20px;
   margin-left: 20px;
-  transition: transform 0.3s ease;
 }

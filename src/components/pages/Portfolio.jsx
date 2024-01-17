@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Collection.css';
+import './Portfolio.css';
 import { Link } from 'react-router-dom';
 
-function Collection() {
+function Portfolio() {
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -128,4 +128,4 @@ function Collection() {
   );
 }
 
-export default Collection;
+export default Portfolio;

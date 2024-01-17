@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
-import Collection from './components/pages/Collection';
+import Portfolio from './components/pages/Portfolio';
 import Contacts from './components/pages/Contacts';
 import './App.css';
 import Footer from './components/Footer';
@@ -29,8 +29,8 @@ function App() {
               element={<Home />}
             />
             <Route
-              path="/collection"
-              element={<Collection />}
+              path="/portfolio"
+              element={<Portfolio />}
             />
             <Route
               path="/contacts"
