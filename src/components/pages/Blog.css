@@ -7,10 +7,10 @@
   background-color: #333;
   min-height: 100vh;
   font-family: 'Italiana', sans-serif;
+  color: white;
 }
 
 .container-frame-blog {
-  background-color: #f8f8f8;
   display: flex;
   flex-direction: column; /* Set flex-direction to column */
   align-items: center;
@@ -19,8 +19,6 @@
   padding: 20px;
   margin-top: 5%;
   margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .blog-h1 {
@@ -44,5 +42,5 @@
   max-width: 100%; /* Adjust max-width as needed */
   margin-top: 5px;
   font-weight: bold;
-  color: black;
+  color: white;
 }
