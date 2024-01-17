@@ -13,6 +13,7 @@ import Project3 from './components/pages/Project3';
 import Project4 from './components/pages/Project4';
 import Project5 from './components/pages/Project5';
 import About from './components/pages/About';
+import Blog from './components/pages/Blog';
 
 function App() {
   return (
@@ -58,6 +59,10 @@ function App() {
             <Route
               path="/about"
               element={<About />}
+            />
+            <Route
+              path="/blog"
+              element={<Blog />}
             />
           </Routes>
         </main>
