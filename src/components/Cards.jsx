@@ -21,7 +21,7 @@ function Cards() {
 
   return (
     <div className="cards-container">
-      <h1>EVA IS THE BOSS</h1>
+      <h1>GEN Interiors</h1>
       <Slider
         {...settings}
         className="cards-slider">
