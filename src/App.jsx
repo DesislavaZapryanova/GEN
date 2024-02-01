@@ -14,6 +14,7 @@ import Project4 from './components/pages/Project4';
 import Project5 from './components/pages/Project5';
 import About from './components/pages/About';
 import Blog from './components/pages/Blog';
+import Services from './components/pages/Services';
 
 function App() {
   return (
@@ -63,6 +64,10 @@ function App() {
             <Route
               path="/blog"
               element={<Blog />}
+            />
+            <Route
+              path="/services"
+              element={<Services />}
             />
           </Routes>
         </main>

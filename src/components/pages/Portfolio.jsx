@@ -22,7 +22,9 @@ function Portfolio() {
   return (
     <div className="container-page">
       <ul className="collections-container">
-        <Link to="/project1">
+        <Link
+          to="/project1"
+          className="project-name">
           <Slider
             {...sliderSettings}
             className="collection-slider">
@@ -30,21 +32,23 @@ function Portfolio() {
               className="collection-image"
               src="images/kitchen-1.jpg"
             />
-
             <img
               className="collection-image"
               src="images/kitchen-2.jpg"
               alt="Kitchen 2"
             />
-
             <img
               className="collection-image"
               src="images/living_room2.jpg"
               alt="Living Room 2"
             />
           </Slider>
+          <p>Project 1</p>
         </Link>
-        <Link to="/project2">
+
+        <Link
+          to="/project2"
+          className="project-name">
           <Slider
             {...sliderSettings}
             className="collection-slider">
@@ -64,8 +68,12 @@ function Portfolio() {
               alt="Bedroom 2-2"
             />
           </Slider>
+          <p>Project 2</p>
         </Link>
-        <Link to="/project3">
+
+        <Link
+          to="/project3"
+          className="project-name">
           <Slider
             {...sliderSettings}
             className="collection-slider">
@@ -85,8 +93,12 @@ function Portfolio() {
               alt="Living Room 1"
             />
           </Slider>
+          <p>Project 3</p>
         </Link>
-        <Link to="/project4">
+
+        <Link
+          to="/project4"
+          className="project-name">
           <Slider
             {...sliderSettings}
             className="collection-slider">
@@ -106,8 +118,12 @@ function Portfolio() {
               alt="Bathroom 3"
             />
           </Slider>
+          <p>Project 4</p>
         </Link>
-        <Link to="/project5">
+
+        <Link
+          to="/project5"
+          className="project-name">
           <Slider
             {...sliderSettings}
             className="collection-slider">
@@ -122,6 +138,7 @@ function Portfolio() {
               alt="Image 4"
             />
           </Slider>
+          <p>Project 5</p>
         </Link>
       </ul>
     </div>
