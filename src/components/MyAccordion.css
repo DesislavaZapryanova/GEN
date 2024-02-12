@@ -1,0 +1,74 @@
+/* MyAccordion.css */
+
+.accordion {
+  width: 80%;
+  margin-top: 10%;
+  font-size: 16px;
+}
+
+.accordion-item {
+  border: 1px solid #333;
+  margin-bottom: 10px;
+}
+
+.accordion-title {
+  background-color: black;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-title.active {
+  background-color: black;
+}
+
+.accordion-content {
+  padding: 10px;
+}
+
+.accordion-content p {
+  display: block;
+  text-align: justify;
+  margin: 10px auto;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+.accordion-content h3 {
+  margin: 15px;
+  font-size: 18px;
+  font-family: 'Lora', serif;
+  text-decoration: underline;
+}
+
+.package {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: calc(25% - 20px);
+  text-align: center;
+  font-size: 16px;
+}
+
+.package h3,
+.package h4 {
+  margin: 0;
+  background-color: #194d42;
+  padding: 10px;
+  color: white;
+  text-decoration: underline;
+}
+
+.package h4 {
+  padding-top: 0;
+  border-bottom: 1px solid #194d42; /* Add border only at the bottom of h4 */
+}
+
+.package p {
+  font-size: 15px;
+  font-family: 'Lora', serif;
+}
