@@ -12,7 +12,7 @@
 }
 
 .accordion-title {
-  background-color: black;
+  background-color: #194d42;
   padding: 10px;
   cursor: pointer;
   display: flex;
@@ -20,7 +20,7 @@
 }
 
 .accordion-title.active {
-  background-color: black;
+  background-color: #194d42;
 }
 
 .accordion-content {
@@ -45,13 +45,19 @@
 .package {
   display: inline-block;
   vertical-align: top;
-  border: 1px solid #ccc;
+  border: none; /* Change border to none */
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
   width: calc(25% - 20px);
   text-align: center;
   font-size: 16px;
+  background-color: #0c2721; /* Change background color */
+  transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+.package:hover {
+  background-color: #194d42; /* Change background color on hover */
 }
 
 .package h3,
